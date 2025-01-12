@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Bank Account Management</h1>
+
+        <div class="account-details border p-4 rounded bg-white shadow" id="accountDetails">
+            <h2 class="h4">Account Details</h2>
+            <p><strong>Account Holder:</strong> <span id="holderName"></span></p>
+            <p><strong>Account Balance:</strong> <span id="accountBalance">R$ 0.00</span></p>
+        </div>
+
+        <div class="mt-4">
+            <h2 class="h4">Transaction</h2>
+            <form id="transactionForm" class="form-inline">
+                <div class="form-group mr-2">
+                    <label for="transactionAmount" class="mr-2">Amount:</label>
+                    <input type="number" id="transactionAmount" class="form-control" required style="width: 100px;">
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">
+                    <i class="fas fa-plus"></i> Deposit
+                </button>
+                <button type="button" id="withdrawButton" class="btn btn-danger">
+                    <i class="fas fa-minus"></i> Withdraw
+                </button>
+            </form>
+        </div>
+
+        <div class="transaction-history mt-4" id="transactionHistory">
+            <h2 class="h4">Transaction History</h2>
+            <div id="transactions" class="border p-2 bg-white rounded shadow"></div>
+            <div class="alert alert-info mt-2" id="noTransactions" style="display: none;">No transactions yet.</div>
+        </div>
+    </div>
+
+    <script type="module" src="../dist/scripts/transaction.js"></script>
+</body>
+</html>

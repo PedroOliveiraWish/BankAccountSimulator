@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.account-details {
+    transition: box-shadow 0.3s;
+}
+
+.account-details:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-history {
+    max-height: 300px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.transaction-history h2 {
+    margin-bottom: 15px;
+}
+
+.transaction-history .alert {
+    display: none; /* Hide by default */
+}
+
+/* Style for the transaction history list */
+.transaction-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Style for each transaction item */
+.transaction-list li {
+    background-color: #f9f9f9; /* Light background for each item */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for spacing */
+    margin-bottom: 10px; /* Space between items */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Change background color on hover */
+.transaction-list li:hover {
+    background-color: #e0f7fa; /* Light blue background on hover */
+}
+
+/* Style for transaction type */
+.transaction-list li strong {
+    color: #00796b; /* Dark teal color for the transaction type */
+}
+
+/* Style for the amount */
+.transaction-list li span.amount {
+    font-weight: bold; /* Bold amount */
+    color: #d32f2f; /* Red color for withdrawal amounts */
+}
+
+/* Style for the date */
+.transaction-list li span.date {
+    font-size: 0.9em; /* Smaller font size for the date */
+    color: #757575; /* Gray color for the date */
+}
